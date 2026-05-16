@@ -20,7 +20,7 @@ function DetailPage({ saved, dispatch }) {
       setError(null)
 
       try {
-        const response = await axios.get(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+        const response = await axios.get(`/api/api/v0/product/${barcode}.json`)
         if (!cancelled) {
           const productData = response.data.product
           if (!productData) {
