@@ -1,11 +1,30 @@
+import { useNavigate } from 'react-router-dom'
+
 function FoodCard({ product }) {
-  const { product_name, brands, nutriments, image_small_url } = product
+  const navigate = useNavigate()
+  const { product_name, brands, nutriments, image_small_url, code } = product
   const calories = nutriments?.['energy-kcal_100g'] ?? nutriments?.energy_100g
   const protein = nutriments?.['proteins_100g']
   const carbs = nutriments?.['carbohydrates_100g']
 
+  const handleClick = () => {
+    if (code) {
+      navigate(`/product/${code}`)
+    }
+  }
+
   return (
-    <article className="food-card">
+    <article
+      className="food-card"
+      onClick={handleClick}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          handleClick()
+        }
+      }}
+    >
       <div className="food-card-image">
         {image_small_url ? (
           <img src={image_small_url} alt={product_name || 'Food product'} />
