@@ -42,7 +42,7 @@ body {
   z-index: 10;
 }
 
-.nav-brand {
+.nav-logo {
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -119,8 +119,9 @@ body {
   border-radius: 12px;
   padding: 14px 16px;
   font-size: 1rem;
-}
-
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
 .search-bar input {
   flex: 1 1 360px;
   min-width: 220px;
@@ -140,27 +141,41 @@ body {
 
 .validation-error {
   color: #b91c1c;
-  font-size: 0.95rem;
+  background-color: #0f172a;
+  color: #ffffff;
 }
+
+.nav-links a:hover {
+  background-color: #1e293b;
 
 .status-message {
   text-align: center;
-  color: #334155;
+  padding: 0 12px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
   margin-top: 4px;
   margin-bottom: 16px;
 }
 
+  padding: 4px 0 2px;
 .error-message {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 16px;
+  color: #b45309;
+  font-size: 0.92rem;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 10px;
+  padding: 10px 12px;
   background: #fee2e2;
   border: 1px solid #fecaca;
   border-radius: 14px;
   color: #b91c1c;
   margin-bottom: 18px;
 }
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 40px;
 
 .food-list {
   display: grid;
@@ -178,6 +193,22 @@ body {
   flex-direction: column;
   min-height: 100%;
   cursor: pointer;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.nutrition-table .nutrition-grid span {
+  display: block;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.nutrition-table .nutrition-grid strong {
+  font-size: 1rem;
+}
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

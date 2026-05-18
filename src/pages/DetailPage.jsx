@@ -96,7 +96,7 @@ function DetailPage({ saved, dispatch }) {
               <p className="brand">{product.brands ? `Brand: ${product.brands}` : 'Brand unknown'}</p>
               <p className="detail-code">Barcode: {barcode}</p>
               <button className="save-button" onClick={handleSave}>
-                {isSaved ? 'Remove from Saved' : 'Save to My List'}
+                {isSaved ? 'Remove' : 'Save to My List'}
               </button>
             </div>
           </div>
